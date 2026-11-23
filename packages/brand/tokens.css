@@ -1,0 +1,19 @@
+/* AVERA brand tokens — from the AVERA design system (brandbook). */
+:root {
+  --night: #0F0E0C;
+  --hazelnut: #39271D;
+  --almond: #644E40;
+  --beige: #B6906B;
+  --sand: #E3D9CF;
+  --linen: #F3ECE4;
+  --paper: #FAF9F6;
+  --pattern-gold: #CFA884;
+  --white: #FFFFFF;
+  --black: #000000;
+
+  --font: 'Bounded', 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-6: 24px; --space-8: 32px; --space-12: 48px;
+}

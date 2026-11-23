@@ -1,0 +1,16 @@
+{
+  "name": "avera-miniapp",
+  "private": true,
+  "type": "module",
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "test": "vitest run",
+    "build:miniapp": "npm run build -w apps/miniapp",
+    "build:admin": "npm run build -w apps/admin"
+  },
+  "devDependencies": {
+    "typescript": "5.6.3",
+    "vitest": "2.1.9",
+    "@electric-sql/pglite": "0.2.17"
+  }
+}
