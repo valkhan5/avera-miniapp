@@ -112,5 +112,8 @@ export const uz: Dict = {
   game_to_catalog: 'KATALOGGA',
   house_dlya_neyo: 'Ayollarga',
   house_detyam: 'Bolalarga',
+  share: 'Doʻstga ulashish',
+  share_text: 'Avera elflariga yangi yil qutilarini yetkazishda yordam bering va −5% oling.',
+  game_time: 'Vaqt',
   house_vzroslym: 'Kattalarga',
 };

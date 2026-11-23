@@ -113,6 +113,9 @@ export const ru = {
   game_to_catalog: 'В КАТАЛОГ',
   house_dlya_neyo: 'Для неё',
   house_detyam: 'Детям',
+  share: 'Поделиться с другом',
+  share_text: 'Помогите эльфам Avera доставить новогодние боксы и получите −5%.',
+  game_time: 'Время',
   house_vzroslym: 'Взрослым',
 };
 export type Dict = typeof ru;
