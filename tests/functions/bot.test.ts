@@ -44,8 +44,8 @@ describe('bot webhook', () => {
 
   it('changes status from a group button, edits the message and notifies the customer', async () => {
     const d = deps();
-    await handleBot('whsec', cb(`st:${sampleOrder.id}:confirmed`), d);
-    expect(d.calls.find((c: any) => c[1] === 'set_order_status')[2]).toMatchObject({ p_order_id: sampleOrder.id, p_status: 'confirmed', p_actor: '@manager' });
+    await handleBot('whsec', cb(`st:${sampleOrder.id}:new:confirmed`), d);
+    expect(d.calls.find((c: any) => c[1] === 'set_order_status')[2]).toMatchObject({ p_order_id: sampleOrder.id, p_status: 'confirmed', p_actor: '@manager', p_expected: 'new' });
     expect(d.calls.some((c: any) => c[1] === 'editMessageText')).toBe(true);
     expect(d.calls.some((c: any) => c[1] === 'sendMessage' && c[2].chat_id === 111)).toBe(true);
     expect(d.calls.some((c: any) => c[1] === 'answerCallbackQuery')).toBe(true);
@@ -53,9 +53,15 @@ describe('bot webhook', () => {
 
   it('answers politely on a stale button and does not notify the customer', async () => {
     const d = deps({ rpc: vi.fn(async () => { throw new Error('BAD_TRANSITION'); }) as any });
-    await handleBot('whsec', cb(`st:${sampleOrder.id}:packing`), d);
+    await handleBot('whsec', cb(`st:${sampleOrder.id}:confirmed:packing`), d);
     expect(d.calls.find((c: any) => c[1] === 'answerCallbackQuery')[2].text).toBe('Статус уже изменён');
     expect(d.calls.some((c: any) => c[1] === 'sendMessage')).toBe(false);
+  });
+
+  it('still accepts buttons drawn before the from-status was added', async () => {
+    const d = deps();
+    await handleBot('whsec', cb(`st:${sampleOrder.id}:confirmed`), d);
+    expect(d.calls.find((c: any) => c[1] === 'set_order_status')[2]).toMatchObject({ p_status: 'confirmed', p_expected: null });
   });
 
   it('ignores buttons pressed outside the manager group', async () => {
@@ -74,6 +80,8 @@ describe('admin function', () => {
     const r = await handleAdmin('Bearer good', { action: 'set_status', order_id: sampleOrder.id, status: 'packing' }, d);
     expect(r.status).toBe(200);
     expect(d.calls.find((c: any) => c[1] === 'set_order_status')[2].p_actor).toBe('m@avera.uz');
+    await handleAdmin('Bearer good', { action: 'set_status', order_id: sampleOrder.id, status: 'done', expected: 'packing' }, d);
+    expect(d.calls.filter((c: any) => c[1] === 'set_order_status')[1][2].p_expected).toBe('packing');
   });
   it('sets up the webhook, menu button and commands', async () => {
     const d = deps();

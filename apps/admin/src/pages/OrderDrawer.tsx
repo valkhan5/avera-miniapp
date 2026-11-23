@@ -24,7 +24,7 @@ export function OrderDrawer({ id, onClose, onChanged }: { id: string | null; onC
   const setStatus = async (s: OrderStatus) => {
     if (s === 'cancelled' && !confirm(`Отменить заявку ${o.number}?`)) return;
     setBusy(true); setError(null);
-    try { await adminApi.setStatus(o.id, s); await load(); onChanged(); }
+    try { await adminApi.setStatus(o.id, s, o.status); await load(); onChanged(); }
     catch (e: any) { setError(e.message === 'BAD_TRANSITION' ? 'Статус уже изменился, обновили карточку.' : 'Не получилось сменить статус.'); await load(); }
     finally { setBusy(false); }
   };

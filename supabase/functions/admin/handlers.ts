@@ -19,7 +19,7 @@ export async function handleAdmin(authHeader: string | null, body: any, d: Admin
   try {
     switch (body?.action) {
       case 'set_status':
-        return ok(await applyStatus(body.order_id, body.status as OrderStatus, user.email ?? user.id, d));
+        return ok(await applyStatus(body.order_id, body.status as OrderStatus, user.email ?? user.id, d, body.expected ?? null));
       case 'setup_bot': {
         await d.tg('setWebhook', { url: `${d.projectUrl}/functions/v1/bot`, secret_token: d.webhookSecret, allowed_updates: ['message', 'callback_query'] });
         await d.tg('setChatMenuButton', { menu_button: { type: 'web_app', text: 'Открыть магазин', web_app: { url: d.miniAppUrl } } });

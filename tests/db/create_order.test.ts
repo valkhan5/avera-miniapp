@@ -24,6 +24,12 @@ describe('create_order', () => {
     expect(b.id).toBe(a.id);
   });
 
+  it('refuses when the price changed after the customer saw the total', async () => {
+    await expect(call(db, 'create_order', 222, pickup([{ variant_id: START_BASE, qty: 1 }], { expected_subtotal: 450000 }))).rejects.toThrow('PRICE_CHANGED');
+    const o = await call(db, 'create_order', 222, pickup([{ variant_id: START_BASE, qty: 2 }], { expected_subtotal: 980000 }));
+    expect(o.subtotal).toBe(980000);
+  });
+
   it('requires a map point for delivery', async () => {
     await expect(call(db, 'create_order', 222, delivery([{ variant_id: START_BASE, qty: 1 }], { lat: null }))).rejects.toThrow('NEED_LOCATION');
   });

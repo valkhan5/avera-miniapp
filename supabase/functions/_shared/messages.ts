@@ -66,7 +66,7 @@ export function groupOrderKeyboard(o: Pick<OrderMsg, 'id' | 'status' | 'fulfillm
   const next = flow.slice(flow.indexOf(o.status) + 1);
   const buttons = [...next, 'cancelled' as OrderStatus].map((s) => ({
     text: s === 'done' && o.fulfillment === 'pickup' ? 'Выдан' : BUTTON_RU[s],
-    callback_data: `st:${o.id}:${s}`,
+    callback_data: `st:${o.id}:${o.status}:${s}`,
   }));
   const rows: { text: string; callback_data: string }[][] = [];
   for (let i = 0; i < buttons.length; i += 2) rows.push(buttons.slice(i, i + 2));

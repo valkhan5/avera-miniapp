@@ -50,15 +50,16 @@ async function onMessage(msg: any, d: BotDeps) {
 }
 
 async function onCallback(q: any, d: BotDeps) {
-  const m = /^st:([0-9a-f-]{36}):([a-z_]+)$/.exec(q.data ?? '');
+  // st:<order id>:<status the button was drawn for>:<target>; buttons drawn before the middle part existed have no from-status.
+  const m = /^st:([0-9a-f-]{36}):(?:([a-z_]+):)?([a-z_]+)$/.exec(q.data ?? '');
   const s = await d.settings();
-  if (!m || !STATUSES.has(m[2]) || q.message?.chat?.id !== s.manager_chat_id) {
+  if (!m || !STATUSES.has(m[3]) || (m[2] && !STATUSES.has(m[2])) || q.message?.chat?.id !== s.manager_chat_id) {
     await d.tg('answerCallbackQuery', { callback_query_id: q.id }).catch(() => {});
     return;
   }
   const actor = q.from?.username ? `@${q.from.username}` : (q.from?.first_name ?? `tg:${q.from?.id}`);
   try {
-    const order = await applyStatus(m[1], m[2] as OrderStatus, actor, d);
+    const order = await applyStatus(m[1], m[3] as OrderStatus, actor, d, (m[2] as OrderStatus | undefined) ?? null);
     await d.tg('answerCallbackQuery', { callback_query_id: q.id, text: `${order.number}: ${STATUS_LABELS.ru[order.fulfillment as 'pickup' | 'delivery'][order.status as OrderStatus]}` });
   } catch (e) {
     if (errorCode(e) === 'BAD_TRANSITION') {

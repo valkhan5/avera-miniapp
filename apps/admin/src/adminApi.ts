@@ -11,7 +11,7 @@ async function invoke<T = any>(body: Record<string, unknown>): Promise<T> {
 }
 
 export const adminApi = {
-  setStatus: (orderId: string, status: string) => invoke({ action: 'set_status', order_id: orderId, status }),
+  setStatus: (orderId: string, status: string, expected: string) => invoke({ action: 'set_status', order_id: orderId, status, expected }),
   setupBot: () => invoke<{ bot: string | null }>({ action: 'setup_bot' }),
   testGroup: () => invoke({ action: 'test_group' }),
 };

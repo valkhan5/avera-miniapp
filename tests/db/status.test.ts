@@ -20,6 +20,14 @@ describe('order status', () => {
     await expect(call(db, 'set_order_status', o.id, 'packing', 'test')).rejects.toThrow('BAD_TRANSITION');
   });
 
+  it('refuses a change when the order moved since the button was drawn', async () => {
+    await customer(db, 333);
+    const o = await call(db, 'create_order', 333, pickup([{ variant_id: V, qty: 1 }]));
+    await call(db, 'set_order_status', o.id, 'packing', '@a', 'new');
+    await expect(call(db, 'set_order_status', o.id, 'confirmed', '@b', 'new')).rejects.toThrow('BAD_TRANSITION');
+    expect((await call(db, 'set_order_status', o.id, 'ready', '@b', 'packing')).status).toBe('ready');
+  });
+
   it('refuses on_the_way for pickup orders', async () => {
     const o = await call(db, 'create_order', 111, pickup([{ variant_id: V, qty: 1 }]));
     await expect(call(db, 'set_order_status', o.id, 'on_the_way', 'test')).rejects.toThrow('BAD_TRANSITION');

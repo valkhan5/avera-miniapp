@@ -80,6 +80,7 @@ export const uz: Dict = {
   err_slot: 'Vaqtni tanlang',
   e_UNAVAILABLE: 'Bu quti endi mavjud emas, savat yangilandi.',
   e_OUT_OF_STOCK: 'Bunchalik quti qolmagan, savat yangilandi.',
+  e_PRICE_CHANGED: 'Narx oʻzgardi. Yangi summani tekshiring va qayta tasdiqlang.',
   e_BAD_DATE: 'Bu sanaga ulgurmaymiz. Boshqa sanani tanlang.',
   e_BAD_SLOT: 'Boshqa yetkazib berish vaqtini tanlang.',
   e_BAD_PROMO: 'Promokod mos kelmadi yoki ishlatilgan.',

@@ -15,8 +15,10 @@ describe('messages', () => {
   it('flags out-of-city delivery', () => { expect(groupOrderText({ ...deliveryOrder, out_of_city: true })).toContain('ВНЕ ТАШКЕНТА'); });
   it('keyboard offers forward statuses and cancel, nothing when final', () => {
     const data = groupOrderKeyboard({ ...sampleOrder, status: 'new' }).inline_keyboard.flat().map((b: any) => b.callback_data);
-    expect(data).toContain(`st:${sampleOrder.id}:confirmed`); expect(data).toContain(`st:${sampleOrder.id}:ready`);
-    expect(data).toContain(`st:${sampleOrder.id}:cancelled`); expect(data).not.toContain(`st:${sampleOrder.id}:new`);
+    expect(data).toContain(`st:${sampleOrder.id}:new:confirmed`); expect(data).toContain(`st:${sampleOrder.id}:new:ready`);
+    expect(data).toContain(`st:${sampleOrder.id}:new:cancelled`); expect(data).not.toContain(`st:${sampleOrder.id}:new:new`);
+    const late = groupOrderKeyboard({ ...deliveryOrder, status: 'on_the_way' }).inline_keyboard.flat().map((b: any) => b.callback_data);
+    expect(late).toEqual([`st:${deliveryOrder.id}:on_the_way:done`, `st:${deliveryOrder.id}:on_the_way:cancelled`]);
     expect(data.every((d: string) => d.length <= 64)).toBe(true);
     expect(groupOrderKeyboard({ ...sampleOrder, status: 'done' }).inline_keyboard).toEqual([]);
   });

@@ -108,6 +108,22 @@ if (scenario === 'checkout' || scenario === 'all') {
     await p.waitForSelector('[data-test=form-error]');
     assert.match(await text(p, '[data-test=form-error]'), /больше недоступен/);
   });
+  await check('checkout: PRICE_CHANGED reloads prices and asks to check the total', async () => {
+    const p = await page('?mock=1&fail=PRICE_CHANGED#/');
+    await p.waitForSelector('[data-test=product-card]');
+    await add(p, 'start');
+    await p.goto(BASE + '?mock=1&fail=PRICE_CHANGED#/checkout');
+    await p.locator('[data-test=fulfillment-pickup]').click();
+    await p.fill('[data-test=phone]', '90 123 45 67');
+    await p.locator('[data-test=date-chip]').first().click();
+    const shown = Number((await text(p, '[data-test=subtotal]')).replace(/\D/g, ''));
+    await p.locator('[data-test=submit]').click();
+    await p.waitForSelector('[data-test=form-error]');
+    assert.match(await text(p, '[data-test=form-error]'), /Цена изменилась/);
+    const calls = await p.evaluate(() => window.__mockCalls);
+    assert.equal(calls.find((c) => c.action === 'create_order').order.expected_subtotal, shown);
+    assert.ok(calls.filter((c) => c.action === 'bootstrap').length >= 2, 'catalog reloaded');
+  });
   await check('checkout: BAD_DATE asks for another date', async () => {
     const p = await page('?mock=1&fail=BAD_DATE#/');
     await p.waitForSelector('[data-test=product-card]');

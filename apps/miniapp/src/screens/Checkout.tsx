@@ -76,7 +76,7 @@ export default function Checkout() {
         address_text: delivery ? form.address.trim() : null, landmark: delivery ? form.landmark.trim() : null,
         lat: delivery ? form.point?.lat : null, lng: delivery ? form.point?.lng : null,
         delivery_date: form.date, delivery_slot: delivery ? form.slot : null, comment: form.comment.trim() || null,
-        promo_code: promoCode || null, notify_allowed: notify,
+        promo_code: promoCode || null, notify_allowed: notify, expected_subtotal: totals.subtotal,
       } });
       cacheOrders([order]);
       if (order.promo_code) setPromo(null);
@@ -88,7 +88,7 @@ export default function Checkout() {
       const key = `e_${code}`;
       setFormError(t(hasKey(key) ? key : 'e_default'));
       haptic('error');
-      if (code === 'UNAVAILABLE' || code === 'OUT_OF_STOCK') await reload();
+      if (code === 'UNAVAILABLE' || code === 'OUT_OF_STOCK' || code === 'PRICE_CHANGED') await reload();
       if (code === 'BAD_PROMO') set('promoCode', '');
       if (code === 'BAD_DATE') set('date', '');
     } finally {
