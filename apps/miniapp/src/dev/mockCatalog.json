@@ -1,0 +1,688 @@
+{
+ "categories": [
+  {
+   "id": "462d3aa4-fe69-498f-af19-bfcbf1386012",
+   "slug": "dlya-neyo",
+   "name_uz": "Ayollarga",
+   "name_ru": "Для неё",
+   "sort": 1,
+   "active": true,
+   "created_at": "2026-11-23T21:51:02.785Z"
+  },
+  {
+   "id": "b2ed0c03-6403-4dd0-b9d2-9e4856fb713e",
+   "slug": "detyam",
+   "name_uz": "Bolalarga",
+   "name_ru": "Детям",
+   "sort": 2,
+   "active": true,
+   "created_at": "2026-11-23T21:51:02.785Z"
+  },
+  {
+   "id": "eedcdf7c-2037-458e-b530-d8540b4419e9",
+   "slug": "vzroslym",
+   "name_uz": "Kattalarga",
+   "name_ru": "Взрослым",
+   "sort": 3,
+   "active": true,
+   "created_at": "2026-11-23T21:51:02.785Z"
+  }
+ ],
+ "products": [
+  {
+   "id": "687f94f9-df98-45cf-b259-50ee8d1712f5",
+   "category_id": "eedcdf7c-2037-458e-b530-d8540b4419e9",
+   "slug": "start",
+   "code": "01",
+   "name_uz": "START",
+   "name_ru": "Старт",
+   "audience_uz": "Yangi smartfon olganlarga",
+   "audience_ru": "Тем, кто купил новый смартфон",
+   "description_uz": "",
+   "description_ru": "",
+   "images": [],
+   "sort": 1,
+   "active": true,
+   "created_at": "2026-11-23T21:51:02.785Z"
+  },
+  {
+   "id": "4cadfd66-6ded-4cae-885f-791f64638c70",
+   "category_id": "eedcdf7c-2037-458e-b530-d8540b4419e9",
+   "slug": "energiya",
+   "code": "02",
+   "name_uz": "ENERGIYA",
+   "name_ru": "Энергия",
+   "audience_uz": "Kun boʻyi harakatda boʻlganlarga",
+   "audience_ru": "Тем, кто весь день в движении",
+   "description_uz": "",
+   "description_ru": "",
+   "images": [],
+   "sort": 2,
+   "active": true,
+   "created_at": "2026-11-23T21:51:02.785Z"
+  },
+  {
+   "id": "a5c77c19-0459-45e3-b861-b604572799ee",
+   "category_id": "eedcdf7c-2037-458e-b530-d8540b4419e9",
+   "slug": "planshet",
+   "code": "03",
+   "name_uz": "PLANSHET",
+   "name_ru": "Планшет",
+   "audience_uz": "Oʻqish, ish va rasm chizish uchun",
+   "audience_ru": "Для учёбы, работы и рисования",
+   "description_uz": "",
+   "description_ru": "",
+   "images": [],
+   "sort": 3,
+   "active": true,
+   "created_at": "2026-11-23T21:51:02.785Z"
+  },
+  {
+   "id": "4d1f84e5-9d40-4cb6-a765-6ca49b903863",
+   "category_id": "eedcdf7c-2037-458e-b530-d8540b4419e9",
+   "slug": "flagman",
+   "code": "04",
+   "name_uz": "FLAGMAN",
+   "name_ru": "Флагман",
+   "audience_uz": "Rahbarlarga, hamkorlarga, oʻzingizga",
+   "audience_ru": "Руководителям, партнёрам, себе",
+   "description_uz": "",
+   "description_ru": "",
+   "images": [],
+   "sort": 4,
+   "active": true,
+   "created_at": "2026-11-23T21:51:02.785Z"
+  },
+  {
+   "id": "005e46bb-f495-4f84-8cd3-b081088839da",
+   "category_id": "b2ed0c03-6403-4dd0-b9d2-9e4856fb713e",
+   "slug": "aloqada",
+   "code": "05",
+   "name_uz": "ALOQADA",
+   "name_ru": "На связи",
+   "audience_uz": "6–10 yoshli bolalarga: ota-ona doim aloqada",
+   "audience_ru": "Детям 6–10 лет: родители всегда на связи",
+   "description_uz": "",
+   "description_ru": "",
+   "images": [],
+   "sort": 5,
+   "active": true,
+   "created_at": "2026-11-23T21:51:02.785Z"
+  },
+  {
+   "id": "701eed08-2198-4e26-9061-a3888a9594f0",
+   "category_id": "b2ed0c03-6403-4dd0-b9d2-9e4856fb713e",
+   "slug": "oqish-va-oyin",
+   "code": "06",
+   "name_uz": "OʻQISH VA OʻYIN",
+   "name_ru": "Учёба и игра",
+   "audience_uz": "Planshetli 8–14 yoshli bolalarga",
+   "audience_ru": "Детям 8–14 лет с планшетом",
+   "description_uz": "",
+   "description_ru": "",
+   "images": [],
+   "sort": 6,
+   "active": true,
+   "created_at": "2026-11-23T21:51:02.785Z"
+  },
+  {
+   "id": "5cbfe9ab-e8f3-4963-8c26-39d06d175954",
+   "category_id": "462d3aa4-fe69-498f-af19-bfcbf1386012",
+   "slug": "selfi",
+   "code": "07",
+   "name_uz": "SELFI",
+   "name_ru": "Селфи",
+   "audience_uz": "Suratga oladigan va blog yuritadiganlarga",
+   "audience_ru": "Для тех, кто снимает и ведёт блог",
+   "description_uz": "",
+   "description_ru": "",
+   "images": [],
+   "sort": 7,
+   "active": true,
+   "created_at": "2026-11-23T21:51:02.785Z"
+  },
+  {
+   "id": "fd0162ab-efea-4801-833a-c80c9f80d98e",
+   "category_id": "462d3aa4-fe69-498f-af19-bfcbf1386012",
+   "slug": "nafosat",
+   "code": "08",
+   "name_uz": "NAFOSAT",
+   "name_ru": "Элеганс",
+   "audience_uz": "Turmush oʻrtogʻingiz, onangiz, hamkasbingizga sovgʻa",
+   "audience_ru": "Подарок жене, маме, коллеге",
+   "description_uz": "",
+   "description_ru": "",
+   "images": [],
+   "sort": 8,
+   "active": true,
+   "created_at": "2026-11-23T21:51:02.785Z"
+  }
+ ],
+ "variants": [
+  {
+   "id": "bff133ad-091c-4921-9f9d-9055e9c91863",
+   "product_id": "687f94f9-df98-45cf-b259-50ee8d1712f5",
+   "kind": "base",
+   "name_uz": "Bazaviy",
+   "name_ru": "Базовый",
+   "items_uz": [
+    "AVERA charm gʻilofi",
+    "Himoya oynasi",
+    "USB-C kabeli",
+    "Avtomobil uchun magnitli ushlagich",
+    "Firma qadogʻi va otkritka"
+   ],
+   "items_ru": [
+    "Кожаный чехол AVERA",
+    "Защитное стекло",
+    "Кабель USB-C",
+    "Магнитный держатель в авто",
+    "Фирменная упаковка с открыткой"
+   ],
+   "price": 490000,
+   "stock": null,
+   "sort": 1,
+   "active": true
+  },
+  {
+   "id": "f227711c-f04a-4686-8145-0505d1548f6e",
+   "product_id": "4cadfd66-6ded-4cae-885f-791f64638c70",
+   "kind": "base",
+   "name_uz": "Bazaviy",
+   "name_ru": "Базовый",
+   "items_uz": [
+    "Powerbank 20 000 mA·soat",
+    "Simsiz quvvatlagich",
+    "35 Vt quvvatlash adapteri",
+    "USB-C kabeli",
+    "AVERA charm gʻilofi",
+    "Firma qadogʻi va otkritka"
+   ],
+   "items_ru": [
+    "Павербанк 20 000 мА·ч",
+    "Беспроводная зарядка",
+    "Сетевое зарядное 35 Вт",
+    "Кабель USB-C",
+    "Кожаный чехол AVERA",
+    "Фирменная упаковка с открыткой"
+   ],
+   "price": 1190000,
+   "stock": null,
+   "sort": 1,
+   "active": true
+  },
+  {
+   "id": "075e06d2-01f3-482b-9e0c-0abc02e54e1b",
+   "product_id": "a5c77c19-0459-45e3-b861-b604572799ee",
+   "kind": "base",
+   "name_uz": "Bazaviy",
+   "name_ru": "Базовый",
+   "items_uz": [
+    "Klaviaturali gʻilof",
+    "Aktiv stilus",
+    "Himoya oynasi",
+    "Planshet stendi",
+    "35 Vt quvvatlash adapteri",
+    "Firma qadogʻi va otkritka"
+   ],
+   "items_ru": [
+    "Чехол-клавиатура",
+    "Активный стилус",
+    "Защитное стекло",
+    "Подставка",
+    "Сетевое зарядное 35 Вт",
+    "Фирменная упаковка с открыткой"
+   ],
+   "price": 1990000,
+   "stock": null,
+   "sort": 1,
+   "active": true
+  },
+  {
+   "id": "2d193b47-ac26-47d4-8bd9-8038e4adc0f2",
+   "product_id": "4d1f84e5-9d40-4cb6-a765-6ca49b903863",
+   "kind": "base",
+   "name_uz": "Bazaviy",
+   "name_ru": "Базовый",
+   "items_uz": [
+    "Premium quloqchinlar",
+    "Aqlli soat",
+    "3 in 1 quvvatlash stansiyasi",
+    "AVERA charm gʻilofi",
+    "Firma qadogʻi va otkritka"
+   ],
+   "items_ru": [
+    "Наушники премиум-класса",
+    "Смарт-часы",
+    "Станция 3-в-1",
+    "Кожаный чехол AVERA",
+    "Фирменная упаковка с открыткой"
+   ],
+   "price": 3990000,
+   "stock": null,
+   "sort": 1,
+   "active": true
+  },
+  {
+   "id": "f1a78e3f-f192-4041-b8d4-fd99c599a255",
+   "product_id": "005e46bb-f495-4f84-8cd3-b081088839da",
+   "kind": "base",
+   "name_uz": "Bazaviy",
+   "name_ru": "Базовый",
+   "items_uz": [
+    "GPS bilan bolalar aqlli soati",
+    "Bolalar quloqchinlari",
+    "Zaxira tasma",
+    "Stikerlar toʻplami",
+    "Firma qadogʻi va otkritka"
+   ],
+   "items_ru": [
+    "Детские смарт-часы с GPS",
+    "Детские наушники",
+    "Запасной ремешок",
+    "Набор наклеек",
+    "Фирменная упаковка с открыткой"
+   ],
+   "price": 1190000,
+   "stock": null,
+   "sort": 1,
+   "active": true
+  },
+  {
+   "id": "89cc5d5b-6402-43aa-8637-2f456c323c60",
+   "product_id": "701eed08-2198-4e26-9061-a3888a9594f0",
+   "kind": "base",
+   "name_uz": "Bazaviy",
+   "name_ru": "Базовый",
+   "items_uz": [
+    "Planshet uchun zarbaga chidamli gʻilof",
+    "Himoya oynasi",
+    "Bolalar stilusi",
+    "Stikerlar toʻplami",
+    "Firma qadogʻi va otkritka"
+   ],
+   "items_ru": [
+    "Ударопрочный чехол для планшета",
+    "Защитное стекло",
+    "Детский стилус",
+    "Набор наклеек",
+    "Фирменная упаковка с открыткой"
+   ],
+   "price": 490000,
+   "stock": null,
+   "sort": 1,
+   "active": true
+  },
+  {
+   "id": "3261ce79-ff87-4f03-aff9-8a84d79af87c",
+   "product_id": "5cbfe9ab-e8f3-4963-8c26-39d06d175954",
+   "kind": "base",
+   "name_uz": "Bazaviy",
+   "name_ru": "Базовый",
+   "items_uz": [
+    "Rangli simsiz quloqchinlar",
+    "Yelka tasmali gʻilof",
+    "Mini powerbank",
+    "Pultli shtativ",
+    "Selfi chirogʻi",
+    "Firma qadogʻi va otkritka"
+   ],
+   "items_ru": [
+    "Беспроводные наушники в цвет",
+    "Чехол с ремешком на плечо",
+    "Мини-павербанк",
+    "Штатив с пультом",
+    "Селфи-свет",
+    "Фирменная упаковка с открыткой"
+   ],
+   "price": 1190000,
+   "stock": null,
+   "sort": 1,
+   "active": true
+  },
+  {
+   "id": "8ec7764e-61b7-4d48-ae29-8e8151549c5f",
+   "product_id": "fd0162ab-efea-4801-833a-c80c9f80d98e",
+   "kind": "base",
+   "name_uz": "Bazaviy",
+   "name_ru": "Базовый",
+   "items_uz": [
+    "Charm tasmali aqlli soat",
+    "Quvvatlash stendi",
+    "Yelka tasmali gʻilof",
+    "Mini powerbank",
+    "Firma qadogʻi va otkritka"
+   ],
+   "items_ru": [
+    "Смарт-часы с кожаным ремешком",
+    "Зарядка-подставка",
+    "Чехол с ремешком на плечо",
+    "Мини-павербанк",
+    "Фирменная упаковка с открыткой"
+   ],
+   "price": 1990000,
+   "stock": null,
+   "sort": 1,
+   "active": true
+  },
+  {
+   "id": "54dad282-35a8-44f6-9b93-eb05d1e9c013",
+   "product_id": "fd0162ab-efea-4801-833a-c80c9f80d98e",
+   "kind": "full",
+   "name_uz": "Toʻliq",
+   "name_ru": "Полный",
+   "items_uz": [
+    "Charm tasmali aqlli soat",
+    "Quvvatlash stendi",
+    "Yelka tasmali gʻilof",
+    "Mini powerbank",
+    "Rangli quloqchinlar",
+    "Kabel organayzeri",
+    "Firma qadogʻi va otkritka"
+   ],
+   "items_ru": [
+    "Смарт-часы с кожаным ремешком",
+    "Зарядка-подставка",
+    "Чехол с ремешком на плечо",
+    "Мини-павербанк",
+    "Наушники в цвет",
+    "Органайзер для кабелей",
+    "Фирменная упаковка с открыткой"
+   ],
+   "price": 2490000,
+   "stock": null,
+   "sort": 2,
+   "active": true
+  },
+  {
+   "id": "fafa10a9-989f-4e59-b4d6-912cef6ca0cd",
+   "product_id": "687f94f9-df98-45cf-b259-50ee8d1712f5",
+   "kind": "full",
+   "name_uz": "Toʻliq",
+   "name_ru": "Полный",
+   "items_uz": [
+    "AVERA charm gʻilofi",
+    "Himoya oynasi",
+    "USB-C kabeli",
+    "Avtomobil uchun magnitli ushlagich",
+    "20 Vt quvvatlash adapteri",
+    "Tozalash toʻplami",
+    "Firma qadogʻi va otkritka"
+   ],
+   "items_ru": [
+    "Кожаный чехол AVERA",
+    "Защитное стекло",
+    "Кабель USB-C",
+    "Магнитный держатель в авто",
+    "Сетевое зарядное 20 Вт",
+    "Набор для чистки",
+    "Фирменная упаковка с открыткой"
+   ],
+   "price": 690000,
+   "stock": null,
+   "sort": 2,
+   "active": true
+  },
+  {
+   "id": "59ae37f3-5921-4408-9948-bd925a4311af",
+   "product_id": "005e46bb-f495-4f84-8cd3-b081088839da",
+   "kind": "full",
+   "name_uz": "Toʻliq",
+   "name_ru": "Полный",
+   "items_uz": [
+    "GPS bilan bolalar aqlli soati",
+    "Bolalar quloqchinlari",
+    "Zaxira tasma",
+    "Stikerlar toʻplami",
+    "Tungi chiroq-kolonka",
+    "Firma qadogʻi va otkritka"
+   ],
+   "items_ru": [
+    "Детские смарт-часы с GPS",
+    "Детские наушники",
+    "Запасной ремешок",
+    "Набор наклеек",
+    "Колонка-ночник",
+    "Фирменная упаковка с открыткой"
+   ],
+   "price": 1490000,
+   "stock": null,
+   "sort": 2,
+   "active": true
+  },
+  {
+   "id": "2457e244-cab6-4096-80c1-a95b06a5167d",
+   "product_id": "4cadfd66-6ded-4cae-885f-791f64638c70",
+   "kind": "full",
+   "name_uz": "Toʻliq",
+   "name_ru": "Полный",
+   "items_uz": [
+    "Powerbank 20 000 mA·soat",
+    "Simsiz quvvatlagich",
+    "35 Vt quvvatlash adapteri",
+    "USB-C kabeli",
+    "AVERA charm gʻilofi",
+    "Simsiz quvvatlashli avtoushlagich",
+    "Firma qadogʻi va otkritka"
+   ],
+   "items_ru": [
+    "Павербанк 20 000 мА·ч",
+    "Беспроводная зарядка",
+    "Сетевое зарядное 35 Вт",
+    "Кабель USB-C",
+    "Кожаный чехол AVERA",
+    "Автодержатель с беспроводной зарядкой",
+    "Фирменная упаковка с открыткой"
+   ],
+   "price": 1490000,
+   "stock": null,
+   "sort": 2,
+   "active": true
+  },
+  {
+   "id": "fb8c5cc6-8bee-4c88-a93a-f1d541d40553",
+   "product_id": "5cbfe9ab-e8f3-4963-8c26-39d06d175954",
+   "kind": "full",
+   "name_uz": "Toʻliq",
+   "name_ru": "Полный",
+   "items_uz": [
+    "Rangli simsiz quloqchinlar",
+    "Yelka tasmali gʻilof",
+    "Mini powerbank",
+    "Pultli shtativ",
+    "Selfi chirogʻi",
+    "Quvvatlash stendi",
+    "Kabel organayzeri",
+    "Firma qadogʻi va otkritka"
+   ],
+   "items_ru": [
+    "Беспроводные наушники в цвет",
+    "Чехол с ремешком на плечо",
+    "Мини-павербанк",
+    "Штатив с пультом",
+    "Селфи-свет",
+    "Зарядка-подставка",
+    "Органайзер для кабелей",
+    "Фирменная упаковка с открыткой"
+   ],
+   "price": 1490000,
+   "stock": null,
+   "sort": 2,
+   "active": true
+  },
+  {
+   "id": "1a841ea9-2f30-4ee5-bab3-5f167bc057da",
+   "product_id": "a5c77c19-0459-45e3-b861-b604572799ee",
+   "kind": "full",
+   "name_uz": "Toʻliq",
+   "name_ru": "Полный",
+   "items_uz": [
+    "Klaviaturali gʻilof",
+    "Aktiv stilus",
+    "Himoya oynasi",
+    "Planshet stendi",
+    "35 Vt quvvatlash adapteri",
+    "Simsiz quloqchinlar",
+    "Firma qadogʻi va otkritka"
+   ],
+   "items_ru": [
+    "Чехол-клавиатура",
+    "Активный стилус",
+    "Защитное стекло",
+    "Подставка",
+    "Сетевое зарядное 35 Вт",
+    "Беспроводные наушники",
+    "Фирменная упаковка с открыткой"
+   ],
+   "price": 2490000,
+   "stock": null,
+   "sort": 2,
+   "active": true
+  },
+  {
+   "id": "c40b8246-f2e2-478b-85c5-51639c606de0",
+   "product_id": "701eed08-2198-4e26-9061-a3888a9594f0",
+   "kind": "full",
+   "name_uz": "Toʻliq",
+   "name_ru": "Полный",
+   "items_uz": [
+    "Planshet uchun zarbaga chidamli gʻilof",
+    "Himoya oynasi",
+    "Bolalar stilusi",
+    "Stikerlar toʻplami",
+    "Bolalar quloqchinlari",
+    "Firma qadogʻi va otkritka"
+   ],
+   "items_ru": [
+    "Ударопрочный чехол для планшета",
+    "Защитное стекло",
+    "Детский стилус",
+    "Набор наклеек",
+    "Детские наушники",
+    "Фирменная упаковка с открыткой"
+   ],
+   "price": 690000,
+   "stock": null,
+   "sort": 2,
+   "active": true
+  },
+  {
+   "id": "bf20aeb2-3b5a-425a-ba2b-a668fc07dfc0",
+   "product_id": "4d1f84e5-9d40-4cb6-a765-6ca49b903863",
+   "kind": "full",
+   "name_uz": "Toʻliq",
+   "name_ru": "Полный",
+   "items_uz": [
+    "Premium quloqchinlar",
+    "Aqlli soat",
+    "3 in 1 quvvatlash stansiyasi",
+    "AVERA charm gʻilofi",
+    "Magnitli powerbank",
+    "35 Vt quvvatlash adapteri",
+    "Firma qadogʻi va otkritka"
+   ],
+   "items_ru": [
+    "Наушники премиум-класса",
+    "Смарт-часы",
+    "Станция 3-в-1",
+    "Кожаный чехол AVERA",
+    "Магнитный павербанк",
+    "Сетевое зарядное 35 Вт",
+    "Фирменная упаковка с открыткой"
+   ],
+   "price": 4490000,
+   "stock": null,
+   "sort": 2,
+   "active": true
+  }
+ ],
+ "banners": [
+  {
+   "id": "5eeb95f6-88de-48f4-8e19-163da3186f8f",
+   "title_uz": "OLIB KETISHDA −10%",
+   "title_ru": "САМОВЫВОЗ −10%",
+   "text_uz": "Qutini Avera Mobile shourumidan olib keting — 10% chegirma.",
+   "text_ru": "Заберите бокс в шоуруме Avera Mobile — скидка 10%.",
+   "image_url": null,
+   "style": "beige",
+   "action": "none",
+   "action_value": null,
+   "sort": 1,
+   "active": true,
+   "starts_at": null,
+   "ends_at": null
+  },
+  {
+   "id": "d18d0b7d-9549-443c-9158-109c8a992785",
+   "title_uz": "BEPUL YETKAZIB BERISH",
+   "title_ru": "ДОСТАВКА БЕСПЛАТНО",
+   "text_uz": "Toshkent boʻylab qutini bepul yetkazib beramiz.",
+   "text_ru": "Привезём бокс по Ташкенту бесплатно.",
+   "image_url": null,
+   "style": "dark",
+   "action": "none",
+   "action_value": null,
+   "sort": 2,
+   "active": true,
+   "starts_at": null,
+   "ends_at": null
+  },
+  {
+   "id": "d4b43140-2076-414a-a008-a500e2c44be8",
+   "title_uz": "QOʻLDA YOZILGAN OTKRITKA",
+   "title_ru": "ОТКРЫТКА ОТ РУКИ",
+   "text_uz": "Otkritkani sizning matningiz bilan qoʻlda yozib beramiz.",
+   "text_ru": "Подпишем открытку от руки вашим текстом.",
+   "image_url": null,
+   "style": "light",
+   "action": "none",
+   "action_value": null,
+   "sort": 3,
+   "active": true,
+   "starts_at": null,
+   "ends_at": null
+  },
+  {
+   "id": "b47ae357-5ae7-4cf8-a4dc-3027fd6ca47b",
+   "title_uz": "AVERA ELFLARI",
+   "title_ru": "ЭЛЬФЫ AVERA",
+   "text_uz": "Oʻynang va qutiga −5% chegirma oling.",
+   "text_ru": "Сыграйте и получите −5% на бокс.",
+   "image_url": null,
+   "style": "dark",
+   "action": "game",
+   "action_value": null,
+   "sort": 4,
+   "active": true,
+   "starts_at": null,
+   "ends_at": null
+  }
+ ],
+ "settings": {
+  "id": 1,
+  "pickup_discount_pct": 10,
+  "promo_discount_pct": 5,
+  "stack_discounts": true,
+  "max_discount_pct": 15,
+  "game_threshold": 300,
+  "promo_valid_until": "2026-12-31T18:59:59.000Z",
+  "delivery_slots": [
+   "10:00–14:00",
+   "14:00–18:00",
+   "18:00–22:00"
+  ],
+  "same_day_cutoff_hour": 16,
+  "last_delivery_date": "2026-12-31T00:00:00.000Z",
+  "pickup_address_uz": "",
+  "pickup_address_ru": "",
+  "pickup_hours_uz": "",
+  "pickup_hours_ru": "",
+  "pickup_lat": null,
+  "pickup_lng": null,
+  "contact_promise_uz": "Menejer siz bilan 15 daqiqa ichida bogʻlanadi (10:00 dan 21:00 gacha)",
+  "contact_promise_ru": "Менеджер свяжется с вами в течение 15 минут (с 10:00 до 21:00)",
+  "bind_code": "856937D2",
+  "manager_chat_id": null,
+  "updated_at": "2026-11-23T21:51:02.785Z"
+ }
+}
