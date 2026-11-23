@@ -11,6 +11,8 @@ describe('dashboard', () => {
     const promo = (await call(db, 'issue_promo', 111, 320, 60000)).promo;
     const o = await call(db, 'create_order', 111, pickup([{ variant_id: await variantId(db, 'start', 'base'), qty: 1 }], { promo_code: promo.code }));
     await call(db, 'set_order_status', o.id, 'done', 'test');
+    await db.query(`insert into managers (email) values ('owner@avera.uz')`);
+    await db.query(`select set_config('request.jwt.claims', '{"email":"owner@avera.uz"}', false)`);
     const d = await call(db, 'dashboard', '2026-12-01T00:00:00+05:00', '2027-01-01T00:00:00+05:00', 'last');
     expect(d.kpi).toMatchObject({ leads: 2, requests: 1, sales: 1, revenue: 416000, players: 1, promos_issued: 1, promos_used: 1 });
     expect(d.by_tag).toContainEqual(expect.objectContaining({ tag: 'ig_dm_boks', requests: 1, sales: 1, revenue: 416000 }));

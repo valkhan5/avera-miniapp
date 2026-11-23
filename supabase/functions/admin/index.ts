@@ -7,7 +7,10 @@ async function getUser(authHeader: string | null) {
   const jwt = authHeader?.replace(/^Bearer\s+/i, '');
   if (!jwt) return null;
   const { data } = await sb.auth.getUser(jwt);
-  return data.user ? { id: data.user.id, email: data.user.email ?? undefined } : null;
+  const email = data.user?.email;
+  if (!data.user || !email) return null;
+  const { data: m } = await sb.from('managers').select('email').ilike('email', email.replace(/[%_\\]/g, '\\$&')).maybeSingle();
+  return m ? { id: data.user.id, email } : null;
 }
 
 Deno.serve(async (req) => {

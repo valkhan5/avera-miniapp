@@ -2,13 +2,14 @@ import { PGlite } from '@electric-sql/pglite';
 import { readFileSync } from 'node:fs';
 import { randomUUID } from 'node:crypto';
 
-const MIGRATIONS = ['0001_schema.sql', '0002_functions.sql', '0003_rls.sql', '0004_seed.sql'];
+const MIGRATIONS = ['0001_schema.sql', '0002_functions.sql', '0003_rls.sql', '0004_seed.sql', '0006_managers.sql'];
 
 export async function freshDb(now = '2026-12-02T08:00:00+05:00'): Promise<PGlite> {
   const db = new PGlite();
   await db.exec(`
     create role anon nologin; create role authenticated nologin; create role service_role nologin bypassrls;
-    create schema auth; create function auth.uid() returns uuid language sql as 'select null::uuid';`);
+    create schema auth; create function auth.uid() returns uuid language sql as 'select null::uuid';
+    create function auth.jwt() returns jsonb language sql stable as $$ select coalesce(nullif(current_setting('request.jwt.claims', true), ''), '{}')::jsonb $$;`);
   for (const f of MIGRATIONS) await db.exec(readFileSync(new URL(`../../supabase/migrations/${f}`, import.meta.url), 'utf8'));
   await setNow(db, now);
   return db;

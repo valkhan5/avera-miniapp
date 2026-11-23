@@ -6,7 +6,19 @@ import { Field, PageHead } from '../components/ui';
 export function Settings() {
   const [s, setS] = useState<any>(null);
   const [msg, setMsg] = useState<string | null>(null);
-  const load = async () => setS(await must(sb.from('settings').select('*').eq('id', 1).single()));
+  const [managers, setManagers] = useState<string[]>([]);
+  const [newEmail, setNewEmail] = useState('');
+  const load = async () => {
+    setS(await must(sb.from('settings').select('*').eq('id', 1).single()));
+    setManagers(((await must(sb.from('managers').select('email').order('email'))) as any[]).map((m) => m.email));
+  };
+  const addManager = async () => {
+    const email = newEmail.trim().toLowerCase();
+    if (!/^\S+@\S+\.\S+$/.test(email)) { setMsg('Проверьте почту'); return; }
+    const { error } = await sb.from('managers').insert({ email });
+    setMsg(error ? error.message : `Доступ открыт для ${email}. Создайте этому человеку пользователя в Supabase → Authentication → Users.`); setNewEmail(''); await load();
+  };
+  const removeManager = async (email: string) => { if (confirm(`Закрыть доступ для ${email}?`)) { await sb.from('managers').delete().eq('email', email); await load(); } };
   useEffect(() => { void load(); }, []);
   if (!s) return <p>Загрузка…</p>;
   const set = (k: string, v: any) => setS((x: any) => ({ ...x, [k]: v }));
@@ -31,6 +43,11 @@ export function Settings() {
           <button className="btn" onClick={() => run(adminApi.setupBot, 'Бот подключён')}>Подключить бота</button>
           <button className="btn" onClick={() => run(adminApi.testGroup, 'Сообщение отправлено в группу')}>Тестовое сообщение в группу</button>
         </div>
+      </section>
+      <section className="card">
+        <h3>Менеджеры с доступом к админке</h3>
+        <ul className="items">{managers.map((m) => <li key={m}>{m} <button className="btn sm" onClick={() => removeManager(m)}>Убрать</button></li>)}</ul>
+        <div className="form-actions"><input className="input" style={{ maxWidth: 320 }} type="email" placeholder="почта менеджера" value={newEmail} onChange={(e) => setNewEmail(e.target.value)} /><button className="btn" onClick={addManager}>Добавить</button></div>
       </section>
       <section className="card grid3">
         <Field label="Скидка за самовывоз, %">{num('pickup_discount_pct')}</Field>

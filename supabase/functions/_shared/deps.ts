@@ -4,10 +4,18 @@ import { tgClient } from './telegram.ts';
 import type { OrderDeps, Settings } from './types.ts';
 
 export const sb = serviceClient();
+const botToken = Deno.env.get('TELEGRAM_BOT_TOKEN') ?? '';
+
+/** Webhook secret derived from the bot token, so only one secret has to be configured. */
+async function deriveSecret(token: string): Promise<string> {
+  const d = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(`${token}:avera-webhook`));
+  return [...new Uint8Array(d)].map((b) => b.toString(16).padStart(2, '0')).join('').slice(0, 48);
+}
+
 export const env = {
-  botToken: Deno.env.get('TELEGRAM_BOT_TOKEN') ?? '',
-  webhookSecret: Deno.env.get('TELEGRAM_WEBHOOK_SECRET') ?? '',
-  miniAppUrl: Deno.env.get('MINIAPP_URL') ?? '',
+  botToken,
+  webhookSecret: Deno.env.get('TELEGRAM_WEBHOOK_SECRET') ?? (botToken ? await deriveSecret(botToken) : ''),
+  miniAppUrl: Deno.env.get('MINIAPP_URL') ?? 'https://avera-miniapp.pages.dev',
   projectUrl: Deno.env.get('SUPABASE_URL') ?? '',
 };
 

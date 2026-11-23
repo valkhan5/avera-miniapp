@@ -1,37 +1,37 @@
 {
  "categories": [
   {
-   "id": "462d3aa4-fe69-498f-af19-bfcbf1386012",
+   "id": "df3ab8ba-fe98-45ca-81d4-fb0021abb341",
    "slug": "dlya-neyo",
    "name_uz": "Ayollarga",
    "name_ru": "Для неё",
    "sort": 1,
    "active": true,
-   "created_at": "2026-11-23T21:51:02.785Z"
+   "created_at": "2026-11-23T23:11:03.584Z"
   },
   {
-   "id": "b2ed0c03-6403-4dd0-b9d2-9e4856fb713e",
+   "id": "17bc9ab8-5b77-42ab-a570-9d618aff78d1",
    "slug": "detyam",
    "name_uz": "Bolalarga",
    "name_ru": "Детям",
    "sort": 2,
    "active": true,
-   "created_at": "2026-11-23T21:51:02.785Z"
+   "created_at": "2026-11-23T23:11:03.584Z"
   },
   {
-   "id": "eedcdf7c-2037-458e-b530-d8540b4419e9",
+   "id": "bf8a7144-1050-41e4-b702-cf7234d0223f",
    "slug": "vzroslym",
    "name_uz": "Kattalarga",
    "name_ru": "Взрослым",
    "sort": 3,
    "active": true,
-   "created_at": "2026-11-23T21:51:02.785Z"
+   "created_at": "2026-11-23T23:11:03.584Z"
   }
  ],
  "products": [
   {
-   "id": "687f94f9-df98-45cf-b259-50ee8d1712f5",
-   "category_id": "eedcdf7c-2037-458e-b530-d8540b4419e9",
+   "id": "3e8118a8-9577-4ce2-ae6c-a22c4cb34036",
+   "category_id": "bf8a7144-1050-41e4-b702-cf7234d0223f",
    "slug": "start",
    "code": "01",
    "name_uz": "START",
@@ -43,11 +43,11 @@
    "images": [],
    "sort": 1,
    "active": true,
-   "created_at": "2026-11-23T21:51:02.785Z"
+   "created_at": "2026-11-23T23:11:03.584Z"
   },
   {
-   "id": "4cadfd66-6ded-4cae-885f-791f64638c70",
-   "category_id": "eedcdf7c-2037-458e-b530-d8540b4419e9",
+   "id": "14a8a566-9219-441d-acee-e6d151cd005a",
+   "category_id": "bf8a7144-1050-41e4-b702-cf7234d0223f",
    "slug": "energiya",
    "code": "02",
    "name_uz": "ENERGIYA",
@@ -59,11 +59,11 @@
    "images": [],
    "sort": 2,
    "active": true,
-   "created_at": "2026-11-23T21:51:02.785Z"
+   "created_at": "2026-11-23T23:11:03.584Z"
   },
   {
-   "id": "a5c77c19-0459-45e3-b861-b604572799ee",
-   "category_id": "eedcdf7c-2037-458e-b530-d8540b4419e9",
+   "id": "5116dee6-2578-40c2-aad8-f7f191ec9507",
+   "category_id": "bf8a7144-1050-41e4-b702-cf7234d0223f",
    "slug": "planshet",
    "code": "03",
    "name_uz": "PLANSHET",
@@ -75,11 +75,11 @@
    "images": [],
    "sort": 3,
    "active": true,
-   "created_at": "2026-11-23T21:51:02.785Z"
+   "created_at": "2026-11-23T23:11:03.584Z"
   },
   {
-   "id": "4d1f84e5-9d40-4cb6-a765-6ca49b903863",
-   "category_id": "eedcdf7c-2037-458e-b530-d8540b4419e9",
+   "id": "41103e80-ae8a-4536-b33a-87e9124d4764",
+   "category_id": "bf8a7144-1050-41e4-b702-cf7234d0223f",
    "slug": "flagman",
    "code": "04",
    "name_uz": "FLAGMAN",
@@ -91,11 +91,11 @@
    "images": [],
    "sort": 4,
    "active": true,
-   "created_at": "2026-11-23T21:51:02.785Z"
+   "created_at": "2026-11-23T23:11:03.584Z"
   },
   {
-   "id": "005e46bb-f495-4f84-8cd3-b081088839da",
-   "category_id": "b2ed0c03-6403-4dd0-b9d2-9e4856fb713e",
+   "id": "8a5a0ca1-72b0-4441-a371-0bd522363953",
+   "category_id": "17bc9ab8-5b77-42ab-a570-9d618aff78d1",
    "slug": "aloqada",
    "code": "05",
    "name_uz": "ALOQADA",
@@ -107,11 +107,11 @@
    "images": [],
    "sort": 5,
    "active": true,
-   "created_at": "2026-11-23T21:51:02.785Z"
+   "created_at": "2026-11-23T23:11:03.584Z"
   },
   {
-   "id": "701eed08-2198-4e26-9061-a3888a9594f0",
-   "category_id": "b2ed0c03-6403-4dd0-b9d2-9e4856fb713e",
+   "id": "c4c7eed5-b231-40cf-a43c-1a4b49ac3a08",
+   "category_id": "17bc9ab8-5b77-42ab-a570-9d618aff78d1",
    "slug": "oqish-va-oyin",
    "code": "06",
    "name_uz": "OʻQISH VA OʻYIN",
@@ -123,11 +123,11 @@
    "images": [],
    "sort": 6,
    "active": true,
-   "created_at": "2026-11-23T21:51:02.785Z"
+   "created_at": "2026-11-23T23:11:03.584Z"
   },
   {
-   "id": "5cbfe9ab-e8f3-4963-8c26-39d06d175954",
-   "category_id": "462d3aa4-fe69-498f-af19-bfcbf1386012",
+   "id": "cec695d3-1b2b-4185-9a97-40a568cb29d4",
+   "category_id": "df3ab8ba-fe98-45ca-81d4-fb0021abb341",
    "slug": "selfi",
    "code": "07",
    "name_uz": "SELFI",
@@ -139,11 +139,11 @@
    "images": [],
    "sort": 7,
    "active": true,
-   "created_at": "2026-11-23T21:51:02.785Z"
+   "created_at": "2026-11-23T23:11:03.584Z"
   },
   {
-   "id": "fd0162ab-efea-4801-833a-c80c9f80d98e",
-   "category_id": "462d3aa4-fe69-498f-af19-bfcbf1386012",
+   "id": "6b0659a9-9cb8-4862-979b-f278b9fae793",
+   "category_id": "df3ab8ba-fe98-45ca-81d4-fb0021abb341",
    "slug": "nafosat",
    "code": "08",
    "name_uz": "NAFOSAT",
@@ -155,13 +155,13 @@
    "images": [],
    "sort": 8,
    "active": true,
-   "created_at": "2026-11-23T21:51:02.785Z"
+   "created_at": "2026-11-23T23:11:03.584Z"
   }
  ],
  "variants": [
   {
-   "id": "bff133ad-091c-4921-9f9d-9055e9c91863",
-   "product_id": "687f94f9-df98-45cf-b259-50ee8d1712f5",
+   "id": "f1961282-bc08-4948-bed4-9e4db340a6a4",
+   "product_id": "3e8118a8-9577-4ce2-ae6c-a22c4cb34036",
    "kind": "base",
    "name_uz": "Bazaviy",
    "name_ru": "Базовый",
@@ -185,8 +185,8 @@
    "active": true
   },
   {
-   "id": "f227711c-f04a-4686-8145-0505d1548f6e",
-   "product_id": "4cadfd66-6ded-4cae-885f-791f64638c70",
+   "id": "926b8fc1-6484-45ac-879c-fb68b05258db",
+   "product_id": "14a8a566-9219-441d-acee-e6d151cd005a",
    "kind": "base",
    "name_uz": "Bazaviy",
    "name_ru": "Базовый",
@@ -212,8 +212,8 @@
    "active": true
   },
   {
-   "id": "075e06d2-01f3-482b-9e0c-0abc02e54e1b",
-   "product_id": "a5c77c19-0459-45e3-b861-b604572799ee",
+   "id": "b68aa52c-2e23-490e-a6bb-906564a0b07f",
+   "product_id": "5116dee6-2578-40c2-aad8-f7f191ec9507",
    "kind": "base",
    "name_uz": "Bazaviy",
    "name_ru": "Базовый",
@@ -239,8 +239,8 @@
    "active": true
   },
   {
-   "id": "2d193b47-ac26-47d4-8bd9-8038e4adc0f2",
-   "product_id": "4d1f84e5-9d40-4cb6-a765-6ca49b903863",
+   "id": "fe0a290f-f35b-4b38-b6f0-1f955db2df15",
+   "product_id": "41103e80-ae8a-4536-b33a-87e9124d4764",
    "kind": "base",
    "name_uz": "Bazaviy",
    "name_ru": "Базовый",
@@ -264,8 +264,8 @@
    "active": true
   },
   {
-   "id": "f1a78e3f-f192-4041-b8d4-fd99c599a255",
-   "product_id": "005e46bb-f495-4f84-8cd3-b081088839da",
+   "id": "4e53e4fe-c5a3-48df-82a1-cf7435fb814c",
+   "product_id": "8a5a0ca1-72b0-4441-a371-0bd522363953",
    "kind": "base",
    "name_uz": "Bazaviy",
    "name_ru": "Базовый",
@@ -289,8 +289,8 @@
    "active": true
   },
   {
-   "id": "89cc5d5b-6402-43aa-8637-2f456c323c60",
-   "product_id": "701eed08-2198-4e26-9061-a3888a9594f0",
+   "id": "77a6ec63-18f0-494e-bfdd-bcfc6fa9a432",
+   "product_id": "c4c7eed5-b231-40cf-a43c-1a4b49ac3a08",
    "kind": "base",
    "name_uz": "Bazaviy",
    "name_ru": "Базовый",
@@ -314,8 +314,8 @@
    "active": true
   },
   {
-   "id": "3261ce79-ff87-4f03-aff9-8a84d79af87c",
-   "product_id": "5cbfe9ab-e8f3-4963-8c26-39d06d175954",
+   "id": "a99a5cf5-0955-4f9f-a094-e16de360cba6",
+   "product_id": "cec695d3-1b2b-4185-9a97-40a568cb29d4",
    "kind": "base",
    "name_uz": "Bazaviy",
    "name_ru": "Базовый",
@@ -341,8 +341,8 @@
    "active": true
   },
   {
-   "id": "8ec7764e-61b7-4d48-ae29-8e8151549c5f",
-   "product_id": "fd0162ab-efea-4801-833a-c80c9f80d98e",
+   "id": "fc40d5a4-0c12-4ff9-bb7f-745a6aec3d11",
+   "product_id": "6b0659a9-9cb8-4862-979b-f278b9fae793",
    "kind": "base",
    "name_uz": "Bazaviy",
    "name_ru": "Базовый",
@@ -366,8 +366,8 @@
    "active": true
   },
   {
-   "id": "54dad282-35a8-44f6-9b93-eb05d1e9c013",
-   "product_id": "fd0162ab-efea-4801-833a-c80c9f80d98e",
+   "id": "02eb6cfa-50a9-4a5a-a7ab-1b6537cac25a",
+   "product_id": "6b0659a9-9cb8-4862-979b-f278b9fae793",
    "kind": "full",
    "name_uz": "Toʻliq",
    "name_ru": "Полный",
@@ -395,8 +395,8 @@
    "active": true
   },
   {
-   "id": "fafa10a9-989f-4e59-b4d6-912cef6ca0cd",
-   "product_id": "687f94f9-df98-45cf-b259-50ee8d1712f5",
+   "id": "4a2d3b92-8dc4-4555-9521-c987b90230ae",
+   "product_id": "3e8118a8-9577-4ce2-ae6c-a22c4cb34036",
    "kind": "full",
    "name_uz": "Toʻliq",
    "name_ru": "Полный",
@@ -424,8 +424,8 @@
    "active": true
   },
   {
-   "id": "59ae37f3-5921-4408-9948-bd925a4311af",
-   "product_id": "005e46bb-f495-4f84-8cd3-b081088839da",
+   "id": "01049ea8-282d-4b73-8dac-baa0358a7c1c",
+   "product_id": "8a5a0ca1-72b0-4441-a371-0bd522363953",
    "kind": "full",
    "name_uz": "Toʻliq",
    "name_ru": "Полный",
@@ -451,8 +451,8 @@
    "active": true
   },
   {
-   "id": "2457e244-cab6-4096-80c1-a95b06a5167d",
-   "product_id": "4cadfd66-6ded-4cae-885f-791f64638c70",
+   "id": "4b18aafc-c1ee-40b3-a1dd-b73a7f4cfb61",
+   "product_id": "14a8a566-9219-441d-acee-e6d151cd005a",
    "kind": "full",
    "name_uz": "Toʻliq",
    "name_ru": "Полный",
@@ -480,8 +480,8 @@
    "active": true
   },
   {
-   "id": "fb8c5cc6-8bee-4c88-a93a-f1d541d40553",
-   "product_id": "5cbfe9ab-e8f3-4963-8c26-39d06d175954",
+   "id": "accfd502-5b0c-49da-9e36-1afefd5b323b",
+   "product_id": "cec695d3-1b2b-4185-9a97-40a568cb29d4",
    "kind": "full",
    "name_uz": "Toʻliq",
    "name_ru": "Полный",
@@ -511,8 +511,8 @@
    "active": true
   },
   {
-   "id": "1a841ea9-2f30-4ee5-bab3-5f167bc057da",
-   "product_id": "a5c77c19-0459-45e3-b861-b604572799ee",
+   "id": "d9a5db3a-138c-4d49-bb7d-0553eca9219d",
+   "product_id": "5116dee6-2578-40c2-aad8-f7f191ec9507",
    "kind": "full",
    "name_uz": "Toʻliq",
    "name_ru": "Полный",
@@ -540,8 +540,8 @@
    "active": true
   },
   {
-   "id": "c40b8246-f2e2-478b-85c5-51639c606de0",
-   "product_id": "701eed08-2198-4e26-9061-a3888a9594f0",
+   "id": "06c570ab-014c-411b-bc40-a26fe8e61f75",
+   "product_id": "c4c7eed5-b231-40cf-a43c-1a4b49ac3a08",
    "kind": "full",
    "name_uz": "Toʻliq",
    "name_ru": "Полный",
@@ -567,8 +567,8 @@
    "active": true
   },
   {
-   "id": "bf20aeb2-3b5a-425a-ba2b-a668fc07dfc0",
-   "product_id": "4d1f84e5-9d40-4cb6-a765-6ca49b903863",
+   "id": "dbcc414b-c4a7-4c25-91d9-42a105406fb7",
+   "product_id": "41103e80-ae8a-4536-b33a-87e9124d4764",
    "kind": "full",
    "name_uz": "Toʻliq",
    "name_ru": "Полный",
@@ -598,7 +598,7 @@
  ],
  "banners": [
   {
-   "id": "5eeb95f6-88de-48f4-8e19-163da3186f8f",
+   "id": "0df79479-0891-46a8-8f81-5917d53dcbe3",
    "title_uz": "OLIB KETISHDA −10%",
    "title_ru": "САМОВЫВОЗ −10%",
    "text_uz": "Qutini Avera Mobile shourumidan olib keting — 10% chegirma.",
@@ -613,7 +613,7 @@
    "ends_at": null
   },
   {
-   "id": "d18d0b7d-9549-443c-9158-109c8a992785",
+   "id": "96557be6-8018-40c7-9fda-70f1bcea153e",
    "title_uz": "BEPUL YETKAZIB BERISH",
    "title_ru": "ДОСТАВКА БЕСПЛАТНО",
    "text_uz": "Toshkent boʻylab qutini bepul yetkazib beramiz.",
@@ -628,7 +628,7 @@
    "ends_at": null
   },
   {
-   "id": "d4b43140-2076-414a-a008-a500e2c44be8",
+   "id": "8b08445a-b690-43d6-8e7d-b309950ac160",
    "title_uz": "QOʻLDA YOZILGAN OTKRITKA",
    "title_ru": "ОТКРЫТКА ОТ РУКИ",
    "text_uz": "Otkritkani sizning matningiz bilan qoʻlda yozib beramiz.",
@@ -643,7 +643,7 @@
    "ends_at": null
   },
   {
-   "id": "b47ae357-5ae7-4cf8-a4dc-3027fd6ca47b",
+   "id": "3a8c6ab1-f7c6-43a7-8289-8f78d883538d",
    "title_uz": "AVERA ELFLARI",
    "title_ru": "ЭЛЬФЫ AVERA",
    "text_uz": "Oʻynang va qutiga −5% chegirma oling.",
@@ -681,8 +681,8 @@
   "pickup_lng": null,
   "contact_promise_uz": "Menejer siz bilan 15 daqiqa ichida bogʻlanadi (10:00 dan 21:00 gacha)",
   "contact_promise_ru": "Менеджер свяжется с вами в течение 15 минут (с 10:00 до 21:00)",
-  "bind_code": "856937D2",
+  "bind_code": "6C85640F",
   "manager_chat_id": null,
-  "updated_at": "2026-11-23T21:51:02.785Z"
+  "updated_at": "2026-11-23T23:11:03.584Z"
  }
 }

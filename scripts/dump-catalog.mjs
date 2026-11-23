@@ -4,7 +4,8 @@ import { readFileSync, writeFileSync } from 'node:fs';
 
 const db = new PGlite();
 await db.exec(`create role anon nologin; create role authenticated nologin; create role service_role nologin bypassrls;
-  create schema auth; create function auth.uid() returns uuid language sql as 'select null::uuid';`);
+  create schema auth; create function auth.uid() returns uuid language sql as 'select null::uuid';
+  create function auth.jwt() returns jsonb language sql stable as $$ select '{}'::jsonb $$;`);
 for (const f of ['0001_schema.sql', '0002_functions.sql', '0003_rls.sql', '0004_seed.sql']) await db.exec(readFileSync(`supabase/migrations/${f}`, 'utf8'));
 const q = async (sql) => (await db.query(sql)).rows;
 const out = {
