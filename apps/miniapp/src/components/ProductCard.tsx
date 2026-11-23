@@ -1,6 +1,7 @@
 import { formatSum } from '@core';
 import { loc, useStore, type Product } from '../store';
 import { BoxArt } from './BoxArt';
+import { productImages } from './productImage';
 
 export function ProductCard({ product, categorySlug }: { product: Product; categorySlug: string }) {
   const { lang, t } = useStore();
@@ -10,7 +11,7 @@ export function ProductCard({ product, categorySlug }: { product: Product; categ
   return (
     <a className="card" data-test="product-card" href={`#/p/${product.slug}`}>
       <div className="card-img">
-        {product.images[0] ? <img src={product.images[0]} alt={loc(lang, product, 'name')} loading="lazy" /> : <BoxArt category={categorySlug} code={product.code} />}
+        {productImages(product, 'card')[0] ? <img src={productImages(product, 'card')[0]} alt={loc(lang, product, 'name')} loading="lazy" /> : <BoxArt category={categorySlug} code={product.code} />}
         {allOut ? <span className="badge">{t('out_of_stock')}</span> : low?.left ? <span className="badge">{t('left', { n: low.left })}</span> : null}
       </div>
       <div className="card-body">

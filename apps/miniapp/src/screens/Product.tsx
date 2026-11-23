@@ -5,6 +5,7 @@ import { back, go } from '../router';
 import { haptic, useBackButton } from '../telegram';
 import { call } from '../api';
 import { BoxArt } from '../components/BoxArt';
+import { productImages } from '../components/productImage';
 import { BottomBar, PrimaryButton } from '../components/BottomBar';
 import { Stepper } from '../components/Stepper';
 import { TopBar } from '../components/TopBar';
@@ -39,8 +40,8 @@ export function ProductScreen({ slug }: { slug: string }) {
     <div className="page">
       <TopBar onBack={onBack} />
       <div className="p-hero">
-        {product.images.length ? (
-          <div className="p-gallery">{product.images.map((src) => <img key={src} src={src} alt={loc(lang, product, 'name')} />)}</div>
+        {productImages(product, 'full').length ? (
+          <div className="p-gallery">{productImages(product, 'full').map((src) => <img key={src} src={src} alt={loc(lang, product, 'name')} />)}</div>
         ) : <BoxArt category={cat?.slug ?? ''} code={product.code} />}
       </div>
       <div className="p-body">
