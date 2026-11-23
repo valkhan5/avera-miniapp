@@ -1,7 +1,12 @@
 // Fake Telegram WebApp for ?mock=1 (local preview and e2e checks).
+import data from './mockCatalog.json';
 export function installMockTelegram() {
   const q = new URLSearchParams(location.search);
   const noop = () => {};
+  if (q.has('cart')) {
+    const v = (data as any).variants;
+    try { localStorage.setItem('avera_cart_v1', JSON.stringify([{ variantId: v[0].id, qty: 1 }, { variantId: v[15].id, qty: 2 }])); } catch { /* ignore */ }
+  }
   window.Telegram = {
     WebApp: {
       initData: 'mock', version: '8.0', platform: 'web',

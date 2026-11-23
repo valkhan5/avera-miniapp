@@ -123,11 +123,11 @@ if (scenario === 'checkout' || scenario === 'all') {
   await check('orders: new order listed as «Новая», cancel → «Отменена»', async () => {
     const p = await page('?mock=1&seedorder=1#/orders');
     await p.waitForSelector('[data-test=order-row]');
-    assert.match(await text(p, '[data-test=order-status]'), /Новая/);
+    assert.match(await text(p, '[data-test=order-status]'), /Новая/i);
     await p.locator('[data-test=order-row]').first().click();
     await p.locator('[data-test=cancel-order]').click();
-    await p.waitForSelector('[data-test=order-status-current]');
-    assert.match(await text(p, '[data-test=order-status-current]'), /Отменена/);
+    await p.waitForFunction(() => /Отменена/i.test(document.querySelector('[data-test=order-status-current]')?.textContent ?? ''), null, { timeout: 5000 });
+    assert.match(await text(p, '[data-test=order-status-current]'), /Отменена/i);
   });
 }
 
