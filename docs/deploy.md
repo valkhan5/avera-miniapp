@@ -20,9 +20,10 @@
 1. Supabase → Edge Functions → Secrets → `TELEGRAM_BOT_TOKEN`.
 2. Supabase → Authentication → Users → Add user (почта из списка менеджеров, Auto Confirm).
    Рекомендуется: Authentication → Sign In / Providers → выключить «Allow new users to sign up».
-3. Cloudflare → Workers & Pages → Create → Pages → Connect to Git → `avera-miniapp`:
-   - мини-приложение: build `npm ci && npm run build:miniapp`, output `apps/miniapp/dist`;
-   - админка: build `npm ci && npm run build:admin`, output `apps/admin/dist`.
+3. Cloudflare → Workers & Pages → Create application → вкладка **Pages** (не Workers; внизу экрана ссылка «Looking to deploy Pages? Get started») → Import an existing Git repository → `valkhan5/avera-miniapp`. Два проекта из одного репозитория:
+   - `avera-miniapp`: production branch `feat/miniapp`, framework preset None, build `npm ci && npm run build:miniapp`, output `apps/miniapp/dist`, root directory пустой;
+   - `avera-admin`: то же, build `npm ci && npm run build:admin`, output `apps/admin/dist`.
+   Если по ошибке создан Worker (адрес `*.workers.dev`, сборка `npx wrangler deploy` падает) — удалить его: Worker → Settings → Delete.
 4. @BotFather → Bot Settings → Configure Mini App → URL мини-приложения.
 5. Админка → Настройки → «Подключить бота»; бот — администратор группы менеджеров; в группе `/bind <код>`; «Тестовое сообщение в группу».
 6. Сбросить ссылку-приглашение группы.
@@ -37,6 +38,6 @@
 - Функции: `npx supabase functions deploy api bot admin --no-verify-jwt --project-ref xikburtaymnlogolmenx`.
 
 ## Проверки
-- `npm test` — 84 автотеста (цены, метки, статусы, база, функции, игра, админка).
+- `npm test` — 87 автотестов (цены, метки, статусы, база, функции, игра, админка).
 - `node scripts/e2e-miniapp.mjs all` — сценарии мини-приложения в браузере (режим `?mock=1`).
 - `node scripts/screens.mjs` — скриншоты экранов.
